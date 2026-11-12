@@ -10,6 +10,10 @@
  */
 export const estPositif = (n) => {
   // à compléter
+  if (n>=0) {
+    return true;
+  } 
+  return false;
 }
 
 /**
@@ -20,6 +24,10 @@ export const estPositif = (n) => {
  */
 export const estPair = (n) => {
   // à compléter
+  if (n%2 == 0) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -30,7 +38,10 @@ export const estPair = (n) => {
  * @example max(3, 7) → 7
  */
 export const max = (a, b) => {
-  // à compléter
+  if (a < b) {
+    return b;
+  }
+  return a;
 }
 
 /**
@@ -42,7 +53,15 @@ export const max = (a, b) => {
  * @example mention(17) → "Très bien"
  */
 export const mention = (note) => {
-  // à compléter
+ if (note>= 16) {
+    return "Très bien."
+ }else if (note >= 14) {
+    return "Bien."
+ }else if (note >= 12) {
+    return "Assez bien."
+ }else if (note >= 10) {
+    return "Passable."
+ }  return "Insuffisant."
 }
 
 /**
@@ -54,5 +73,12 @@ export const mention = (note) => {
  * @example fizzbuzz(15) → "FizzBuzz"
  */
 export const fizzbuzz = (n) => {
-  // à compléter
+  if (n % 3 == 0 && n % 5 == 0) {
+    return "FizzBuzz"
+  }else if (n % 3 === 0) {
+    return "Fizz"
+  }else if (n % 5 === 0) {
+    return "Buzz"
+  }else
+    return n.toString()
 }
