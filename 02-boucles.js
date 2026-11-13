@@ -8,7 +8,9 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
+ for (let i = 1; i <= n; i++){
+  console.log(i)
+ }
 }
 
 /**
@@ -18,7 +20,12 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
+ for (let i = 1; i <= n; i++) 
+    if (i % 2 === 0){
+        console.log(i)
+    }
+    
+
 }
 
 /**
@@ -30,6 +37,11 @@ export const afficherPairs = (n) => {
  */
 export const somme = (n) => {
   // à compléter
+  let acc = 0;
+  for (let i =1; i <= n; i++){
+    acc = acc + i
+  }
+  return acc;
 }
 
 /**
@@ -42,6 +54,13 @@ export const somme = (n) => {
  */
 export const produit = (n) => {
   // à compléter
+  let acc = 1;
+
+  for (let i = 1; i <= n; i++) {
+    acc = acc * i;
+  }
+
+  return acc;
 }
 
 /**
@@ -51,9 +70,16 @@ export const produit = (n) => {
  * @returns {number}
  * @example compterPairs(10) → 5
  * @example compterPairs(7)  → 3
+ * 
  */
 export const compterPairs = (n) => {
   // à compléter
+  let nombre = 0; 
+  for (let i = 1; i <= n; i++){
+    if (i % 2 === 0)
+      nombre = nombre + 1
+  }
+  return nombre
 }
 
 /**
@@ -66,6 +92,14 @@ export const compterPairs = (n) => {
  */
 export const table = (n) => {
   // à compléter
+
+  let tableau = []
+
+  for (let i = 1; i <= n; i++) {
+    tableau.push(n * i);
+
+  }
+  return tableau;
 }
 
 /**
@@ -79,8 +113,19 @@ export const table = (n) => {
  */
 export const multiplesJusqua = (n, limite) => {
   // à compléter
+if (n <= 0){
+  return [];
 }
 
+let tableau = [];
+for (let i = 1; n * i <= limite; i++) {
+  tableau.push(n * i);
+
+}
+return tableau 
+
+}
+  
 /**
  * [FACULTATIF]
  * Retourne base élevé à la puissance exposant. Sans Math.pow().
