@@ -19,6 +19,16 @@ describe("maximum", () => {
 // Cas à couvrir : cas normal, négatifs.
 describe("minimum", () => {
   // à compléter
+  it("retourne le minimum", () => {
+    expect(minimum([3, 7, 2, 9, 1])).toBe(1)
+  })
+  it("fonctionne avec un seul élément", () => {
+    expect(minimum([5])).toBe(5)
+  })
+   it("fonctionne avec des négatifs", () => {
+    expect(minimum([-3, -1, -7])).toBe(-7)
+  })
+
 })
 
 // Nouveau cas : retourner null. On te montre moyenne en entier.
@@ -44,6 +54,18 @@ describe("contient", () => {
 // Cas à couvrir : plusieurs occurrences, valeur absente (retourne 0).
 describe("compter", () => {
   // à compléter
+  it("compter le nombre d'occurrences d'une valeur", () => {
+    expect(compter([1, 2, 2, 3, 2], 2)).toBe(3)
+  })
+  it("retourner 0 si la valeur est absente", () => {
+    expect(compter([1, 2, 3], 5)).toBe(0)
+  })
+  it("retourner 0 si le tableau est vide", () => {
+    expect(compter([], 2)).toBe(0)
+  })
+  it("compter une seule occurence", () => {
+    expect(compter([4, 5, 6], 5)).toBe(1)
+  })
 })
 
 // [FACULTATIF] Nouveau cas : vérifier que le tableau original n'est pas modifié.

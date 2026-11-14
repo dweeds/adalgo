@@ -10,6 +10,14 @@
  */
 export const maximum = (tableau) => {
   // à compléter
+  let plusGrand = tableau[0]
+  for (let i = 1; i < tableau.length; i++){
+    if (tableau[i] > plusGrand){
+      plusGrand = tableau[i]
+    }
+    
+  }
+  return plusGrand
 }
 
 /**
@@ -20,6 +28,13 @@ export const maximum = (tableau) => {
  */
 export const minimum = (tableau) => {
   // à compléter
+  let plusPetit = tableau[0]
+  for (let i = 1; i < tableau.length; i++) {
+    if( tableau[i] < plusPetit){
+      plusPetit = tableau[i]
+    }
+  }
+  return plusPetit
 }
 
 /**
@@ -30,7 +45,19 @@ export const minimum = (tableau) => {
  */
 export const moyenne = (tableau) => {
   // à compléter
+    if (tableau.length === 0) {
+    return null
+  }
+
+  let somme = 0
+
+  for (let i = 0; i < tableau.length; i++) {
+    somme = somme + tableau[i]
+  }
+
+  return somme / tableau.length
 }
+
 
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
@@ -42,6 +69,13 @@ export const moyenne = (tableau) => {
  */
 export const contient = (tableau, valeur) => {
   // à compléter
+for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      return true
+    }
+  }
+
+  return false
 }
 
 /**
@@ -53,6 +87,15 @@ export const contient = (tableau, valeur) => {
  */
 export const compter = (tableau, valeur) => {
   // à compléter
+  let nombre = 0
+
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      nombre = nombre + 1
+    }
+  }
+
+  return nombre
 }
 
 /**
